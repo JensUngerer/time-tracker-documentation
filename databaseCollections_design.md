@@ -5,6 +5,8 @@ The application uses three collections to store all the data.
 * `projects` : Project names
 * `features`: Feature names
 * `tasks` : Task descriptions
+* `types`: Types of a timeEntries - document
+* `timeEntries`: The smallest "unit" of this time-tracker: started and (only once) stopped
 
 ### Collection: `projects`
 
