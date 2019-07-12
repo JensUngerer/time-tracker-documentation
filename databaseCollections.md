@@ -40,8 +40,8 @@ The application uses three collections to store all the data.
 <!-- a time entry should not be reused for several start - stop operations -->
 <!-- each start - stop operation should be stored -->
 <!-- each start - stop operation should increase the (current) duration in the tasks - document -->
-<!-- the (current) duration in the tasks - document should be realized as durationInMinutes property -->
-<!-- the current duration should be visualized on the UI (perhaps as server push event / or as setIntervall approach in the UI) in hours and minutes -->
+<!-- the (current) duration in the tasks - document should be realized as duration (in minutes) property -->
+<!-- the current duration should be visualized on the UI (perhaps as server push event / or as set-interval approach in the UI) in hours and minutes -->
 
 ### Collection: `types`
 

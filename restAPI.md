@@ -6,6 +6,46 @@ cf. https://docs.feathersjs.com/api/client/rest.html#http-api
 
 #### Operations
 
+##### Create a new project
+
+In order to create a new project, two properties (in /MongoDB/projects) need to be created:
+
+* name := HTTP-BODY.name
+* projectId := uuid.v4()
+
+| REST-API-suffix    | HTTP-Method | URL-parameters | HTTP-BODY              | Description                                             | Resolves               |
+|:-------------------|:------------|:---------------|:-----------------------|:--------------------------------------------------------|:-----------------------|
+| /NodeJS/projects   | POST        |                | name                   | /MongoDb/projects create                                | projectId              |
+
+##### Create a new feature
+
+In order to create a new feature, several properties (in /MongoDB/features) need to be created:
+
+* name := HTTP-BODY.name
+* featureId: uuid.v4()
+* _taskIds := new Array()
+* _projectId := URL-parameter.projectId
+
+| REST-API-suffix    | HTTP-Method | URL-parameters | HTTP-BODY              | Description                                             | Resolves               |
+|:-------------------|:------------|:---------------|:-----------------------|:--------------------------------------------------------|:-----------------------|
+| /NodeJS/features   | POST        | projectId      | name                   | /MongoDb/features create                                | featureId              |
+
+##### Create a new task
+
+In order to create a new task, several properties (in /MongoDB/tasks) need to be created:
+
+* taskId := uuid.v4()
+* _featureId := URL-paramters.featureId
+* duration := 0
+
+Furthermore it is necessary to patch the corresponding feature (via /MongoDB/features):
+
+* _taskIds.push(taskId)
+
+| REST-API-suffix    | HTTP-Method | URL-parameters | HTTP-BODY              | Description                                             | Resolves               |
+|:-------------------|:------------|:---------------|:-----------------------|:--------------------------------------------------------|:-----------------------|
+| /NodeJS/tasks      | POST        |  featureId     | name                   | /MongoDB/tasks create + /MongoDB/features patch         | taskId                 |
+
 ##### Start new timeEntry for a specific task(Id)
 
 In order to "start" a new timeEntry-document (/MongoDB/timeEntries) for a specific task, it is necessary to create a timeEntries document with:
@@ -38,14 +78,3 @@ Furthermore it is necessary to patch a tasks-document:
 | REST-API-suffix     | HTTP-Method | URL-parameters | HTTP-BODY              | Description                                             | Resolves               |
 |:--------------------|:------------|:---------------|:-----------------------|:--------------------------------------------------------|:-----------------------|
 | /NodeJS/timeEntries | PATCH       | timeEntryId    |                        | /MongoDb/timeEntries patch + /MongoDB/tasks patch       | duration               |
-
-
-
-
-<!--| projectAdd         | Add a new project in a specific time entry                                             |
-| taskAdd            | Add a new task in a specific project                                                   |
-| timeEntryDelete    | Delete a previously entered time entry                                                 |
-| projectDelete      |                                                                                        |
-| taskDelete         |                                                                                        |
-| start              | Start (or re-start) the time tracking for a specific time entry of a project to a task |
-| stop               | Stop (or re-stop) the time tracking for a specific time entry of a project to a task   |-->
