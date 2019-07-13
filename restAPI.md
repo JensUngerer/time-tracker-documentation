@@ -83,3 +83,9 @@ Furthermore it is necessary to patch a tasks-document:
 | REST-API-suffix     | HTTP-Method | URL-parameters | HTTP-BODY              | Description                                             | Resolves               |
 |:--------------------|:------------|:---------------|:-----------------------|:--------------------------------------------------------|:-----------------------|
 | /NodeJS/timeEntries | PATCH       | timeEntryId    |                        | /MongoDb/timeEntries patch + /MongoDB/tasks patch       | duration               |
+
+#### Toggle Pause
+
+| REST-API-suffix     | HTTP-Method | URL-parameters | HTTP-BODY              | Description                                             | Resolves               |
+|:--------------------|:------------|:---------------|:-----------------------|:--------------------------------------------------------|:-----------------------|
+| /NodeJS/togglePause | PATCH       | timeEntryId    |                        | /MongoDb/timeEntries patch                              | pauseDuration          |
