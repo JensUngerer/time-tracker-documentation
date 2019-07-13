@@ -55,6 +55,7 @@ In order to "start" a new timeEntry-document (/MongoDB/timeEntries) for a specif
 * duration := null
 * description := HTTP-BODY.description
 * timeEntryId := uuid.v4()
+* pauses := new Array()
 
 Furthermore, it is necessary to patch an existing tasks-document (/MongoDB/tasks) with the timeEntryId of the timeEntry-document (see above):
 
@@ -71,9 +72,13 @@ In order to "stop" a timeEntry-document, it is necessary to patch the timeEntry-
 * endTime := new Date()
 * duration := endTime - startTime
 
+Additionally, the pauseDurationSum must be calculated by entries of the
+
+* pauses - Array
+
 Furthermore it is necessary to patch a tasks-document:
 
-* duration := duration + timeEntryDocument.duration
+* duration := duration + timeEntryDocument.duration - pauseDurationSum
 
 | REST-API-suffix     | HTTP-Method | URL-parameters | HTTP-BODY              | Description                                             | Resolves               |
 |:--------------------|:------------|:---------------|:-----------------------|:--------------------------------------------------------|:-----------------------|

@@ -59,7 +59,8 @@ The application uses three collections to store all the data.
 | startTime         | Date      | time stamp when the document was created, i.e. a task was started         |
 | endTime           | Date      | time stamp when the task was stopped, i.e. this property is normally null |
 | duration          | Number    | duration in minutes, i.e. this property is normally null                  |
-| description       | String    | an optional description, i.e. by default ths property is null             |
+| description       | String    | a description                                                             |
 | timeEntryId       | String    | uuid for a specific timeEntry                                             |
 | _typeId           | String    | typeId - property of a types - document                                   |
+| pauses            | Array     | entries of type IPause - the so measured durations will be subtracted     |
 
