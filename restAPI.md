@@ -6,6 +6,44 @@ cf. https://docs.feathersjs.com/api/client/rest.html#http-api
 
 #### Operations
 
+#### Add a commit to a project (with the task(s) as comment)
+
+* durationDataStructure := body.durationDataStructure
+* dateDataStructure: body.dateDataStructure
+* descriptionArr := body.descriptionArray
+TODO: really necessary ?
+* taskIds? := body.taskIds
+
+| REST-API-suffix    | HTTP-Method | URL-parameters | HTTP-BODY               | Description                                             | Resolves               |
+|:-------------------|:------------|:---------------|:------------------------|:--------------------------------------------------------|:-----------------------|
+| /NodeJS/timeRecords| POST        |                | durDs, dateDs, descrArr |  /MongoDb/timeRecords create                            |                        |
+
+#### Add project-name
+
+| REST-API-suffix    | HTTP-Method | URL-parameters | HTTP-BODY               | Description                                             | Resolves               |
+|:-------------------|:------------|:---------------|:------------------------|:--------------------------------------------------------|:-----------------------|
+| /NodeJS/projects   | POST        |                |                         |  /MongoDb/projects - document is created                |                        |
+
+#### Retrieve project-name
+
+| REST-API-suffix    | HTTP-Method | URL-parameters | HTTP-BODY               | Description                                             | Resolves               |
+|:-------------------|:------------|:---------------|:------------------------|:--------------------------------------------------------|:-----------------------|
+| /NodeJS/projects   | GET         |                |                         |  /MongoDb/projects is read                              |                        |
+
+#### Add task-name
+
+| REST-API-suffix    | HTTP-Method | URL-parameters | HTTP-BODY               | Description                                             | Resolves               |
+|:-------------------|:------------|:---------------|:------------------------|:--------------------------------------------------------|:-----------------------|
+| /NodeJS/tasks      | POST        |                |                         |  /MongoDb/tasks - document is created                   |                        |
+
+#### Retrieve task-name
+
+| REST-API-suffix    | HTTP-Method | URL-parameters | HTTP-BODY               | Description                                             | Resolves               |
+|:-------------------|:------------|:---------------|:------------------------|:--------------------------------------------------------|:-----------------------|
+| /NodeJS/tasks      | GET         |                |                         |  /MongoDb/tasks - document is read                      |                        |
+
+#### Begin Comment
+
 ##### Create a new project
 
 In order to create a new project, two properties (in /MongoDB/projects) need to be created:
@@ -89,3 +127,5 @@ Furthermore it is necessary to patch a tasks-document:
 | REST-API-suffix     | HTTP-Method | URL-parameters | HTTP-BODY              | Description                                             | Resolves               |
 |:--------------------|:------------|:---------------|:-----------------------|:--------------------------------------------------------|:-----------------------|
 | /NodeJS/togglePause | PATCH       | timeEntryId    |                        | /MongoDb/timeEntries patch                              | pauseDuration          |
+
+#### End Comment
