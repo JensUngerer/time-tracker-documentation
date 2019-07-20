@@ -18,6 +18,8 @@ TODO: really necessary ?
 |:-------------------|:------------|:---------------|:------------------------|:--------------------------------------------------------|:-----------------------|
 | /NodeJS/timeRecords| POST        |                | durDs, dateDs, descrArr |  /MongoDb/timeRecords create                            |                        |
 
+### TODO: read and visualize the db-entries regarding timeRecords
+
 #### Add project-name
 
 | REST-API-suffix    | HTTP-Method | URL-parameters | HTTP-BODY               | Description                                             | Resolves               |
