@@ -6,10 +6,10 @@
 ~~There should be two views: both a view to commit tickets (as a kind of work in progress ticket)~~
 ~~and a (kind of) booking tickets (as a kind of booking several time-entry of a day) to a booking code.~~
 
-# new view: commit - view
+# ~~new view: commit - view~~
 
 ## purpose
-After renaming the current committing view to booking view, a new commit for displaying th hours to commit on a (work in progress) ticket. 
+~~After renaming the current committing view to booking view, a new commit for displaying th hours to commit on a (work in progress) ticket.~~
 
 # create new data-base collection: commit(ing)-time-records
 
