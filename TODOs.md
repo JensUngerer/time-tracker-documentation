@@ -1,10 +1,10 @@
 # TODO(s)
 
-# renaming existing commit(ing) - view to book(ing) - view
+# ~~renaming existing commit(ing) - view to book(ing) - view~~
 
-## purpose
-There should be two views: both a view to commit tickets (as a kind of work in progress ticket)
-and a (kind of) booking tickets (as a kind of booking several time-entry of a day) to a booking code.
+## ~~purpose~~
+~~There should be two views: both a view to commit tickets (as a kind of work in progress ticket)~~
+~~and a (kind of) booking tickets (as a kind of booking several time-entry of a day) to a booking code.~~
 
 # new view: commit - view
 
