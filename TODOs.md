@@ -15,14 +15,21 @@
 
 ## purpose
 
-In order to store the data of the new committing view, a new data-base collection is necessary.
-(By the way, the same interface for both committing-time-records and booking-time-records can be used!)
+~~In order to store the data of the new committing view, a new data-base collection is necessary.
+(By the way, the same interface for both committing-time-records and booking-time-records can be used!)~~
 
 # rename existing timeRecords to (something like) booking-time-records
 
-# purpose
-As there is already a timeRecords - collection, it should be renamed to booking-time-records.
-(So it is clear what data it contains!)
+## purpose
+~~As there is already a timeRecords - collection, it should be renamed to booking-time-records.
+(So it is clear what data it contains!)~~
+
+# refactoring / re-engineering
++ ~~rely on drop-down-values instead of url values~~
++ ~~(never the less, if there is a value in the url -> write it to the drop-down)~~
+
+# implement new commit view
+
 
 # code cleanup and refactoring
 
